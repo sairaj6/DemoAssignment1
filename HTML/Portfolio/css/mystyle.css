@@ -1,0 +1,59 @@
+body{
+    background-color: aliceblue;
+    font-family: 'Merriweather', serif;
+}
+
+.sidebar{
+    background-color: rgb(66, 109, 110);
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    padding-left: 0;
+    position: absolute;
+}
+
+.sidebar ul{
+    margin-top: auto;
+    list-style: none;
+    padding: 90% 2%;
+
+}
+
+.sidebar li{
+    padding: 20px;
+   
+}
+
+.sidebar a{
+    color: #F2F2F2;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar li:hover{
+    background-color: coral;  
+}
+
+
+.profile{
+    border-radius: 100px;
+    max-width: 200px;
+    margin: 10px;
+    float: left;
+    margin-left: 50px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    
+}
+
+.content{
+    margin: 10px;
+    margin-left: 200px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+
+
+
