@@ -1,0 +1,43 @@
+
+body{
+    position: relative;
+    width: 50%;
+    margin: auto;
+    padding-top: 20px;    
+}
+    
+td, tr{
+ 
+    height: 30px;
+}
+
+.formtable{
+    
+    background-color: blanchedalmond;
+    text-align: left;
+    border: 4px black solid;
+    border-radius: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 100%;
+}
+
+span{
+    color: red;
+    width: 150%;
+    text-align: right;
+    height: 30px;
+    
+
+}
+
+
+#btn_sign_up, #btn_clear{
+    background-color: black;
+    color: aliceblue;
+    padding: 10px;
+
+    border-radius: 10px;
+    border: 4px white solid;
+}
+
+
