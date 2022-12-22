@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+
+    <!--Stylesheet-->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+
+    <!--JavaScript-->
+    <script  type="text/javascript">
+        
+        //get data
+        function getData(){
+            //getting value from first page
+            var name =document.getElementById("txtName").value;
+
+            //saving to storage
+            localStorage.setItem("txtName",name);
+        }
+
+    </script>
+</head>
+<body class="mx-10 my-auto py-5">
+    <div class="container border border-dark border-2 rounded mx-auto py-3 text-dark bg-info " >
+        <div class="from-group mx-auto " ">
+            <h2>Personal Details</h2>
+            <form id="frmReg" name="frmReg" method="post" action="success.html" onsubmit="return matchPassWord()">
+                    <div class="mb-3">                   
+                            <label for="txt_name" class="form-label">Enter Name</label>
+                            <input class="form-control  " type="text" id="txt_name" placeholder="enter full name" />
+                            <span  class="text-danger" id="spn_name"></span>
+                    </div>
+                    <div class="mb-3"> 
+                            <label for="txt_email" class="form-label">Enter Email</label>
+                            <input class="form-control m-auto" type="email" id="txt_email" placeholder="enter email" />
+                            <span class="text-danger" id="spn_email"></span>
+                    </div>
+                    <div class="mb-3">
+                            <label for="txt_mobile" class="form-label"> Enter Mobile</label>     
+                            <input class="form-control" type="text" id="txt_mobile" placeholder="enter 10 digit mobile number" />
+                            <span class="text-danger" id="spn_mobile"></span>
+                    </div>
+
+                    <div class="mb-3"></div>
+                            <label for="txt_password" class="form-label"> Enter Password</label>
+                            <input class="form-control" type="password" id="txt_password" placeholder="enter password" />
+                            <span class="text-danger" id="spn_password"></span>
+                    </div>
+                    <div class="mb-3">
+                            <label for="txt_confirmpassword" class="form-label"> Confirm Password</label>
+                            <input class="form-control" type="password" id="txt_confirmpassword" placeholder="confirm password" />
+                            <span class="text-danger" id="spn_confirmpassword"></span>
+                    </div>
+
+                    <div class="mb-3">
+                            <label class="form-label">Select Gender</label>
+                            <input class="form-check-input" type="radio" id="rdo_gender_male" value="male" name="gender" onblur="checkGender()" />male
+                            <input class="form-check-input" type="radio" id="rdo_gender_female" value="female" name="gender" onblur="checkGender()" />female
+                            <span class="text-danger" id="spn_gender"></span>
+                    </div>
+                    <div class="mb-3">
+                            <label for="date" class="form-label">Date of Birth</label>
+                            <input type="date" id="date">
+                            <span id="spn_date"></span>
+                    </div>
+                    <div class="mb-3">
+                            <label class="form-label">Select Hobbies</label>
+                            <input class="form-check-input" type="checkbox" name="chbx_hobbies" value="Anime" onblur="checkHobbies()" />Anime
+                            <input class="form-check-input" type="checkbox" name="chbx_hobbies" value="Reading" onblur="checkHobbies()" />Reading
+                            <input class="form-check-input" type="checkbox" name="chbx_hobbies" value="Football" onblur="checkHobbies()" />Football
+                            <input class="form-check-input" type="checkbox" name="chbx_hobbies" value="Painting" onblur="checkHobbies()" />Painting
+                            <span class="text-danger" id="spn_hobbies"></span>
+                    </div>
+                    <div class="mb-3">
+                            <label for="drpdwn_city" class="form-label">Select State</label>
+                            <select class="form-select" id="drpdwn_city">
+                                <option value="select state">Select State</option>
+                                <optgroup label="Maharashtra">
+                                    <option>Kolhapur</option>
+                                    <option>Mumbai</option>
+                                    <option>Pune</option>
+                                </optgroup>
+                                <optgroup label="Karnataka">
+                                    <option>Belgaum</option>
+                                    <option>Banglore</option>
+                                </optgroup>
+                            </select>
+                            <select class="form-select" id="drpdwn_taluka" style="visibility: hidden">
+                                <option value="select taluka">Select Taluka</option>
+                                <option>Karveer</option>
+                                <option>Parola</option>
+                                <option>Pimpari-Chinchwad</option>
+                                <option value="others">Others</option>
+                            </select>
+                            <input class="form-control" type="text" id="txt_others" style="visibility: hidden">
+                            <span id="spn_city"></span>
+                    </div>
+                    <div class="mb-3">
+                            <button class="btn btn-dark " type="button" id="btn_sign_up">Sign Up</button>
+                            <button class="btn btn-dark" type="button" id="btn_sign_in">Sign In</button>
+                        <span class="text-danger"  id="spn_sign_up"> </span>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    
+    <script src="../js/validation.js"></script>
+</body>
+</html>
